@@ -1,4 +1,4 @@
-From ChatGPT:
+# From ChatGPT:
 
 Q: Imagine that I split a city into a grid, where each square of the grid corresponds to an area. If I have the data for how many people enter, leave and remain in each square, can I somehow calculate the direction of how people are moving through the squares? Thanks
 
