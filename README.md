@@ -2,8 +2,10 @@
 
 Solving a mobility problem in the city of Lisbon.
 
-Install direnv (optional, only once)
-    curl -sfL https://direnv.net/install.sh | bash
+Optional - Install direnv
+    WSL/Linux:
+        curl -sfL https://direnv.net/install.sh | bash
+    Windows - online guide at https://gist.github.com/rmtuckerphx/4ace28c1605300462340ffa7b7001c6d
 
 Install dependencies
     conda env create -f environment.yml
