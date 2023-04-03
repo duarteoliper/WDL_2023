@@ -9,3 +9,6 @@ Install dependencies
     conda env create -f environment.yml
     conda activate wdl_2023
     pip install -r requirements.txt
+
+Download dataset "ficheiros_WDL" from:
+    https://challenges.worlddataleague.com/event/wdl-2023
