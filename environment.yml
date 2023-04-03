@@ -1,0 +1,9 @@
+name: wdl_2023
+channels:
+  - conda-forge
+  - defaults
+  # - pytorch
+dependencies:
+  - python=3.9.7
+  - virtualenv=20.4.6
+  - pip
