@@ -2,7 +2,7 @@
 
 Solving a mobility problem in the city of Lisbon.
 
-Install direnv (only once)
+Install direnv (optional, only once)
     curl -sfL https://direnv.net/install.sh | bash
 
 Install dependencies
