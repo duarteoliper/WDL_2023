@@ -15,6 +15,6 @@
 - Football Matches at Alvalade Stadium: 12/10 (international match), 22/10, 1/11 (international match), 5/11, 17/11, 30 /11, 13/12, 19/12
 - Football Matches at Luz Stadium: 5/10 (international match), 8/10, 25/10 (international match), 29/10, 13/11, 26/11,17/12
 
-## 2 - Dateset
+## 2 - Dataset
 ## 3 - Dispostivos Moveis_Quadriculas
 - we inform that the Parishes correspond to the administrative organization in force.
