@@ -15,5 +15,16 @@ Merge: timestamps e coordenadas gps
 <br>
 
 * Waze_QUEBRA DE SERIE:
-??
+Atenção! - Dados com irregularidades sérias entre 30/09 e 09/10.
+    * Traffic level data recorded through the WAZE platform
+"Congestion Level Code (0 = free of traffic 5 = road blocked)
+0 = traffic free flow speed at 80% traffic free flow speed
+1 = 80% to 61% traffic free flow speed
+2 = 60% to 41%
+3 = 40% to 21%
+4 = 20% to 1%
+5 = road blocked"
+    * Delay relative to speed without traffic (in case of blockage = -1)
 
+* Autocarros
+Sem dados da Carris, apenas Carristur. Dados insuficientes para análise.
