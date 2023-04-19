@@ -30,7 +30,7 @@ Mo Money, Mo Models
 * Paulo Sousa
 
 
-## TODO - ✨ Introduction (250 words max)
+## ✨ Introduction (250 words max)
 Provide a contextualization of the problem, together with an estimation of its size using real numbers and references. In this section you should demonstrate your understanding of the problem.
 
 The problem that the CNN-LSTM model is aiming to solve is the issue of overcrowding in public spaces within the city of Lisbon. The growing population in the metropolitan area of Lisbon, which is estimated to be 3,001,000 in 2023 [1], poses a significant challenge for city managers to ensure public safety and comfort. This high population density can lead to overcrowding in public spaces such as public transportation, parks, and shopping centers. Overcrowding can cause discomfort and inconvenience for individuals and, in extreme cases, lead to safety hazards such as stampedes and accidents.
