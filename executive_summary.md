@@ -17,8 +17,7 @@ Instructions:
 
 
 ## 🎯 Challenge
-*Insert challenge name here*
-
+First Phase
 
 ## Team Name
 Mo Money, Mo Models
@@ -33,7 +32,18 @@ Mo Money, Mo Models
 
 ## TODO - ✨ Introduction (250 words max)
 Provide a contextualization of the problem, together with an estimation of its size using real numbers and references. In this section you should demonstrate your understanding of the problem.
-*Write here*
+
+The problem that the CNN-LSTM model is aiming to solve is the issue of overcrowding in public spaces within the city of Lisbon. The growing population in the metropolitan area of Lisbon, which is estimated to be 3,001,000 in 2023 [1], poses a significant challenge for city managers to ensure public safety and comfort. This high population density can lead to overcrowding in public spaces such as public transportation, parks, and shopping centers. Overcrowding can cause discomfort and inconvenience for individuals and, in extreme cases, lead to safety hazards such as stampedes and accidents.
+
+This trend is not limited to the city of Lisbon. According to an Harvard International Review Article [2], the global population is currently rising at a steady rate. Between the years 1800 and 2023, the population of Earth has increased significantly. In 1800, it was estimated that there were around 1 billion inhabitants, and by 1940, this number had risen to 2.3 billion. Over the next three decades, the population continued to grow rapidly, reaching 3.7 billion by 1970. As of 2023, the world's population is approximately 7.8 billion, showing the most significant increase in the Earth's population in the last five decades.
+
+With this in mind, it is vital to provide city managers with tools to detect and prevent overcrowding events.
+
+**References:**
+
+[1] https://www.macrotrends.net/cities/22167/lisbon/population#:~:text=The%20current%20metro%20area%20population,a%200.51%25%20increase%20from%202020. - last accessed 18/04/2023
+
+[2] https://hir.harvard.edu/public-health-and-overpopulation/ - last accessed 18/04/2023
 
 
 ## TODO - 🔢 Data (250 words max)
