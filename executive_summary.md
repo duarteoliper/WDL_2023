@@ -1,7 +1,7 @@
 ﻿# World Data League 2023
 
 ## 🎯 Challenge
-First Phase
+Determining the mobility flow in the city of Lisbon based on mobile phone data
 
 ## Team Name
 Mo Money, Mo Models
