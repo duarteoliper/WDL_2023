@@ -1,20 +1,4 @@
 ﻿# World Data League 2023
-# TODO - REMOVE TEMPLATE INFO AT THE END
-## Executive Summary Template
-This executive summary is one of the mandatory deliverables when you submit your solution. Its structure follows the WDL evaluation criteria and it has dedicated sections where you should add information. Make sure your executive summary covers all the sections since it will be an integral part of the Insights Report and your evaluation. Make sure your content is relevant and straight to the point.
-**There is no need to reach the maximum number of words.**
-
-
-Instructions:
-
-
-1. 🧱 Create a separate copy of this template and do not change the predefined structure
-2. 👥 Fill in the Authors section with the names of allteam members
-3. ✏️ Write your executive summary - make sure you write for a non-technical audience. 
-4. 📄 Fill in all the text sections
-5. 🗑️ Remove this section (‘Executive Summary Template’) and any instructions inside other sections
-6. ⬆️ Upload the .md file to the submission platform.
-
 
 ## 🎯 Challenge
 First Phase
@@ -30,7 +14,7 @@ Mo Money, Mo Models
 * Paulo Sousa
 
 
-## ✨ Introduction (250 words max)
+## DONE - ✨ Introduction (250 words max)
 Provide a contextualization of the problem, together with an estimation of its size using real numbers and references. In this section you should demonstrate your understanding of the problem.
 
 The problem that the CNN-LSTM model is aiming to solve is the issue of overcrowding in public spaces within the city of Lisbon. The growing population in the metropolitan area of Lisbon, which is estimated to be 3,001,000 in 2023 [1], poses a significant challenge for city managers to ensure public safety and comfort. This high population density can lead to overcrowding in public spaces such as public transportation, parks, and shopping centers. Overcrowding can cause discomfort and inconvenience for individuals and, in extreme cases, lead to safety hazards such as stampedes and accidents.
@@ -46,54 +30,89 @@ With this in mind, it is vital to provide city managers with tools to detect and
 [2] https://hir.harvard.edu/public-health-and-overpopulation/ - last accessed 18/04/2023
 
 
-## TODO - 🔢 Data (250 words max)
+## TO REVIEW- 🔢 Data (250 words max)
 Explain what data you used (both provided by WDL and external) and improvements you suggest to those datasets. Explain how those improvements would lead to a better solution.
-*Write here*
+
+
+We used the datasets, provided by the WDL, regarding mobile devices.
+With this data we created a grid map. For the grid cells where there was a train line or station a new identifier was added. These data were taken from the Lisboa Aberta portal [2].
+
+We also explored climate data briefly - nominally precipitation and temperature - using climatelab to load the ERA5 reanalysis dataset [1], but we could only obtain one value for the entire city per hour, so we did not consider it a priority at the moment.
+
+One of the datasets provided by the WDL that initially looked promising was the traffic conditions. However as this data were not real-time it were not relevant as inputs to the model. In the future it could be used to seek an explanation for certain phenomena observed by the data
+
+In order to improve the quality of the data it would be interesting to standardise the type of files with the available data, as some are in .csv format and others in .xlsx. Also .geojson data has been used.
+
+Finally, we noticed that the data from mobile devices had maxima much higher than the 99th percentile, which indicated that they were erroneous measurements. 
+
+
+**References:**
+
+[1] https://cds.climate.copernicus.eu/
+[2] https://lisboaaberta.cm-lisboa.pt/
+
 
 
 ## TODO - 🧮 Methods and Techniques (250 words max)
 Tell us what methods and algorithms you used and the results you obtained.
-*Write here*
+
+EDA Phone data
+The proposed CNN-LSTM architecture joins state-of-the-art deep learning models for image processing (CNN, Convolutional Neural Network) and time series forecasting (LSTM, Long Short-Term Memory). In theory, this model is able to leverage the spatial relationships within the city grid to provide better predictions based on neighbor relations, as well as the temporal dimension for forecasting. However, we encountered some challenges with training time that limited performance, and had to limit the learning rate, epochs, and batch size. We also had to follow a preliminar preprocessing pipeline, as we were performing EDA in parallel. Future work must focus on improving the experimental infrastructure, model architecture, integrating new data, and the preprocessing suggested in the EDA stage.
+
+Transports’ data
+The transport data have been superimposed on the grid created earlier. For this it was necessary to find out the distance from each of the stations to the centroids of the grid cells. Then this grid was ordered and the cell with the shortest distance was the one most likely to have a station. 	
 
 
 ## TODO - 💡 Main Insights (300 words max)
 Explain what you discovered from addressing this problem, such as interesting facts or statistics.
-*Write here*
 
+EDA insights
+errors
+Model performance
+train time limitations
 
 ## TODO - 🛠️ Product
 In this section you should define the product that can be created by using the model developed. Make sure that the product solves the problem in a holistic way, takes into account the constraints of the topic entities (specifically mention these constraints).
-### TODO - Definition
+### DONE - Definition
 Define in **one sentence** what product(s) could be built out of the code you produced.
-Example: A dashboard that assists in traffic control
+A dashboard that assists in public transport planning, and a dashboard that assists in policing.
 
 
-### TODO - Users
+### TO REVIEW - Users
 Describe who would be the users of your product and for what purpose would they use it.
 Example: Traffic controllers use the dashboard during their work to better plan where to dispatch resources
 
+Decision makers in transport companies, especially metro and rail, can use our dashboard and the forecasts our models provide to decide the human resources deployed for each moment of the day.
+City councils can also use the predictions from our models to decide which events to promote in which part of town to promote a more dispersed population and thus a better quality of life for citizens.
+The citizens of the city in general can also benefit from our predictions, in order to have a lifestyle more in tune with their personality. They can move to more crowded areas or to quieter areas, as they wish.
+Traffic police can also perform better at resolving overcrowding situations preemptively, and ensure citizens’ safety.
 
-### TODO - Activities
+### TO REVIEW - Activities
 Describe what features your product has.
 Example:
 * Predicts the most likely locations for traffic accidents
 * Suggests the fastest route from dispatch centres
 
+* Predicts the most likely locations for overcrowding situations
 
-### TODO - Output
+### TO REVIEW - Output
 Describe what the product outputs to the users and how it does that. You can add mockups and/or visualisations.
 Example: Location of the accident on a map and suggest the fastest route from the dispatch centre.
+Population density predictions on a map for the next X hours.
 
 
-### TODO - Scalability
+### TO REVIEW - Scalability
 Discuss the scalability and the ease of implementation of your solution in the scope of the topic entity. Feel free to mention any road blocks you see and how they could be solved.
 
+For this solution to be employed in another environment, we would require it to have similar phone grid history. Additional data such as tranports and climate could also be helpful to improve model performance. Finally, a larger model following our pipeline and trained with data from more locations could have generalization capabilities.
 
 ## TODO - 🌍 Social Impact Measurement
 This section will help to guide you on how to measure the impact of your product. Make sure that measurement is thoroughly quantitative, even if you need to estimate some of the numbers.
-### TODO - Outcome
+### TO REVIEW - Outcome
 If the outputs are your immediate results, describe your long-term results. What do you want your product to achieve? What ''good'' are you creating?
 Example: To decrease response time from dispatchers so that people in urgent need receive help faster.
+
+To predict overcrowding situations and decrease response time so that cities are more secure and provide better quality of life for its citizens.
 
 
 ### TODO - Impact Metrics
@@ -101,6 +120,8 @@ From the outcome, define **2 to 4 metrics** that measure, whether you are achiev
 Example:
 * Average Dispatch Time
 * Average Distance from Accident Location and Dispatch Center
+
+* Average Response time
 
 
 ### TODO - Impact Measurement
@@ -110,3 +131,4 @@ Since you cannot wait to see the impact of your product, estimate it. You can do
 Example:
 * *Based on model predictions*: Our model estimates a decrease of 6 minutes of the average dispatch time and a decrease of the average distance of 200 metres
 * **THIS!! NO EXTRAPOLATION REQUIRED, JUST REFERENCE** *Based on proxy products*: Similar studies in other cities show that the dispatch time can be decreased by as much as 13 minutes, depending on the traffic intensity of that city.
+
