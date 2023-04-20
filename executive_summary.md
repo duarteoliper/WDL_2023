@@ -1,7 +1,7 @@
 ﻿# World Data League 2023
 
 ## 🎯 Challenge
-First Phase
+Determining the mobility flow in the city of Lisbon based on mobile phone data
 
 ## Team Name
 Mo Money, Mo Models
@@ -14,8 +14,7 @@ Mo Money, Mo Models
 * Paulo Sousa
 
 
-## DONE - ✨ Introduction (250 words max)
-Provide a contextualization of the problem, together with an estimation of its size using real numbers and references. In this section you should demonstrate your understanding of the problem.
+## ✨ Introduction (250 words max)
 
 The problem that the CNN-LSTM model is aiming to solve is the issue of overcrowding in public spaces within the city of Lisbon. The growing population in the metropolitan area of Lisbon, which is estimated to be 3,001,000 in 2023 [1], poses a significant challenge for city managers to ensure public safety and comfort. This high population density can lead to overcrowding in public spaces such as public transportation, parks, and shopping centers. Overcrowding can cause discomfort and inconvenience for individuals and, in extreme cases, lead to safety hazards such as stampedes and accidents.
 
@@ -30,9 +29,7 @@ With this in mind, it is vital to provide city managers with tools to detect and
 [2] https://hir.harvard.edu/public-health-and-overpopulation/ - last accessed 18/04/2023
 
 
-## TO REVIEW- 🔢 Data (250 words max)
-Explain what data you used (both provided by WDL and external) and improvements you suggest to those datasets. Explain how those improvements would lead to a better solution.
-
+## 🔢 Data (250 words max)
 
 We used the datasets, provided by the WDL, regarding mobile devices.
 With this data we created a grid map. For the grid cells where there was a train line or station a new identifier was added. These data were taken from the Lisboa Aberta portal [2].
@@ -53,13 +50,12 @@ Finally, we noticed that the data from mobile devices had maxima much higher tha
 
 
 
-## TODO - 🧮 Methods and Techniques (250 words max)
-Tell us what methods and algorithms you used and the results you obtained.
+## 🧮 Methods and Techniques (250 words max)
 
-EDA Phone data
+TODO - EDA
+
 The proposed CNN-LSTM architecture joins state-of-the-art deep learning models for image processing (CNN, Convolutional Neural Network) and time series forecasting (LSTM, Long Short-Term Memory). In theory, this model is able to leverage the spatial relationships within the city grid to provide better predictions based on neighbor relations, as well as the temporal dimension for forecasting. However, we encountered some challenges with training time that limited performance, and had to limit the learning rate, epochs, and batch size. We also had to follow a preliminar preprocessing pipeline, as we were performing EDA in parallel. Future work must focus on improving the experimental infrastructure, model architecture, integrating new data, and the preprocessing suggested in the EDA stage.
 
-Transports’ data
 The transport data have been superimposed on the grid created earlier. For this it was necessary to find out the distance from each of the stations to the centroids of the grid cells. Then this grid was ordered and the cell with the shortest distance was the one most likely to have a station. 	
 
 
@@ -68,17 +64,18 @@ Explain what you discovered from addressing this problem, such as interesting fa
 
 EDA insights
 errors
-Model performance
+Model
+performance
 train time limitations
 
 ## TODO - 🛠️ Product
 In this section you should define the product that can be created by using the model developed. Make sure that the product solves the problem in a holistic way, takes into account the constraints of the topic entities (specifically mention these constraints).
-### DONE - Definition
+### Definition
 Define in **one sentence** what product(s) could be built out of the code you produced.
 A dashboard that assists in public transport planning, and a dashboard that assists in policing.
 
 
-### TO REVIEW - Users
+### Users
 Describe who would be the users of your product and for what purpose would they use it.
 Example: Traffic controllers use the dashboard during their work to better plan where to dispatch resources
 
@@ -87,41 +84,26 @@ City councils can also use the predictions from our models to decide which event
 The citizens of the city in general can also benefit from our predictions, in order to have a lifestyle more in tune with their personality. They can move to more crowded areas or to quieter areas, as they wish.
 Traffic police can also perform better at resolving overcrowding situations preemptively, and ensure citizens’ safety.
 
-### TO REVIEW - Activities
-Describe what features your product has.
-Example:
-* Predicts the most likely locations for traffic accidents
-* Suggests the fastest route from dispatch centres
+### Activities
 
-* Predicts the most likely locations for overcrowding situations
+Predicts the most likely locations for overcrowding situations
 
-### TO REVIEW - Output
-Describe what the product outputs to the users and how it does that. You can add mockups and/or visualisations.
-Example: Location of the accident on a map and suggest the fastest route from the dispatch centre.
+### Output
 Population density predictions on a map for the next X hours.
 
+###  Scalability
 
-### TO REVIEW - Scalability
-Discuss the scalability and the ease of implementation of your solution in the scope of the topic entity. Feel free to mention any road blocks you see and how they could be solved.
-
-For this solution to be employed in another environment, we would require it to have similar phone grid history. Additional data such as tranports and climate could also be helpful to improve model performance. Finally, a larger model following our pipeline and trained with data from more locations could have generalization capabilities.
+For this solution to be employed in another environment, we would require it to have similar phone grid history. Additional data such as tranports and climate could also be helpful to improve model performance. Finally, a larger model following our pipeline and trained with data from more locations could have more generalization capabilities.
 
 ## TODO - 🌍 Social Impact Measurement
 This section will help to guide you on how to measure the impact of your product. Make sure that measurement is thoroughly quantitative, even if you need to estimate some of the numbers.
-### TO REVIEW - Outcome
-If the outputs are your immediate results, describe your long-term results. What do you want your product to achieve? What ''good'' are you creating?
-Example: To decrease response time from dispatchers so that people in urgent need receive help faster.
-
+### Outcome
 To predict overcrowding situations and decrease response time so that cities are more secure and provide better quality of life for its citizens.
 
 
-### TODO - Impact Metrics
-From the outcome, define **2 to 4 metrics** that measure, whether you are achieving that outcome or not.
-Example:
-* Average Dispatch Time
-* Average Distance from Accident Location and Dispatch Center
-
-* Average Response time
+### Impact Metrics
+Average REsponse Time from Transportation Planning
+Average Response Time From Police Stations
 
 
 ### TODO - Impact Measurement
